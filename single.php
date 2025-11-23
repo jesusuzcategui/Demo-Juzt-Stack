@@ -9,4 +9,4 @@ $context = Timber::context();
 $context['order'] = $template_content['order'];
 $context['sections'] = $template_content['sections'];
 
-Timber::render('templates/single.twig', $context); 
+Timber::render('templates/index.twig', $context); 

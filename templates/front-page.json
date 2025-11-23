@@ -55,9 +55,19 @@
                     }
                 }
             ]
+        },
+        "section_1763917520977": {
+            "section_id": "hello-juzt",
+            "settings": {
+                "background_color": "#46219c",
+                "title": "Hello from Juzt Extension!!",
+                "subtitle": "This section comes from an extension!"
+            },
+            "blocks": []
         }
     },
     "order": [
+        "section_1763917520977",
         "section_1763724281878"
     ],
     "name": "Home page Front",

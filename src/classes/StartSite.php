@@ -2,23 +2,28 @@
 
 namespace JuztStack\JuztOrbit;
 
+use JuztStack\JuztOrbit\JuztStack;
 use JuztStack\JuztOrbit\SvgSupport;
 use JuztStack\JuztOrbit\Widgets;
 use JuztStack\JuztOrbit\Assets;
+use JuztStack\JuztOrbit\Extensions;
 use Timber\Site;
-//use Timber\Timber;
+
+if(class_exists('Timber\\Site') === false){
+  return;
+}
 
 #[\AllowDynamicProperties]
-
 class StartSite extends Site
 {
   public function __construct()
   {
     add_action('after_setup_theme', array($this, 'themeSupports'));
+    new Extensions();
+    new JuztStack();
     new Assets();
     new SvgSupport();
     new Widgets();
-
     return parent::__construct();
   }
 
@@ -60,5 +65,7 @@ class StartSite extends Site
       'views_sections_directory' => 'views/sections',  // Para Twig
       'schemas_directory' => 'schemas'                 // Para Builder
     ]);
+
+    
   }
 }

@@ -1,8 +1,14 @@
 {% extends "layouts/base.twig" %}
 {% block content %}
     {% for item in order %}
-      <section id="{{ item }}" data-section-id="{{ sections[item].section_id }}">
-        {% include "sections/" ~ sections[item].section_id ~ ".twig" ignore missing with {'section': sections[item] } %}
+      {% set section_id = sections[item].section_id %}
+      
+      <section id="{{ item }}" data-section-id="{{ section_id }}">
+        {% include [
+            "sections/" ~ section_id ~ ".twig",
+            section_id ~ "/" ~ section_id ~ ".twig",
+            section_id ~ ".twig"
+        ] ignore missing with {'section': sections[item] } %}
       </section>
     {% endfor %}
 {% endblock %}

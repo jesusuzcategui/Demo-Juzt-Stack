@@ -4,16 +4,16 @@
         "section_1763724281878": {
             "section_id": "hello-orbit",
             "settings": {
-                "title": "Hola soy un sitio en local",
-                "background": "#227c42",
+                "title": "Juzt Orbit Local Site",
+                "background": "#726f0d",
                 "color": "#ffffff"
             },
             "blocks": [
                 {
                     "type": "feature",
                     "settings": {
-                        "title": "JSON Templates",
-                        "description": "The templates for pages have been manager by a minimal customizer"
+                        "title": "Bloque 1",
+                        "description": "Esto es un bloque genial"
                     }
                 },
                 {
